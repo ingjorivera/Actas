@@ -1,0 +1,14 @@
+<script>
+    window.addEventListener('message', function(event) {
+       
+      
+       
+        if (event.data) {
+            localStorage.setItem("obj", event.data);
+                window.location.href='./index.html'      
+        } else {
+            localStorage.removeItem("obj");
+        }
+    
+});
+</script>
