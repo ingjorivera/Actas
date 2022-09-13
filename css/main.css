@@ -301,3 +301,11 @@ h6{
     border: 1px solid var(--primario-claro);
     padding: 10px;
 }
+
+img {
+display:block !important;
+margin-left:auto;
+margin-right:auto;
+margin-top:10px;
+margin-bottom:10px
+}
