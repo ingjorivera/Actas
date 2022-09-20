@@ -40,7 +40,7 @@ let body=`
                 <div class=" fecha">
                     <div class="caja-fecha">
                         <div class="titulo fg-blanco">AÑO</div>
-                        <div class="texto">${fecha[2]}</div>
+                        <div class="texto">${fecha[0]}</div>
                     </div>
                     <div class="caja-fecha">
                         <div class="titulo fg-blanco">MES</div>
@@ -48,7 +48,7 @@ let body=`
                     </div>
                     <div class="caja-fecha">
                         <div class="titulo fg-blanco">DIA</div>
-                        <div class="texto" >${fecha[0]}</div>
+                        <div class="texto" >${fecha[2]}</div>
                     </div>
                 </div>
                 <div class="titulo-central fg-primario-oscuro">${objeto['titulo_acta']}</div>

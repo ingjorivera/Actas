@@ -342,3 +342,18 @@ box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.45);
 .icon-printer{
     width: 30px;
 }
+table tr {
+    page-break-inside: avoid !important;
+}
+
+table[data-split-from] {
+    border-top: initial !important;
+}
+
+table[data-split-to] {
+    border-bottom: initial !important;
+}
+
+[data-align-last-split-element='justify'] {
+    text-align-last: initial !important;
+}

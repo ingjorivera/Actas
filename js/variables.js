@@ -45,26 +45,26 @@ for(let i=0;i<objetos.length;i++){
 }
 //obtener filas de desarrollo
 
-let multi=document.querySelectorAll('[multi]')
-let objmulti=[]
-for(const m of multi){
-    let matriz=[]
-    let filas = m.getElementsByTagName('tr')
-    let titulos = filas[0].getElementsByTagName('td')
-    for(const f of filas){
-        let celdas=f.getElementsByTagName('td')
-        contador=0
-        let m={}
-        for(const c of celdas){
-            m[titulos[contador].innerText]=c.innerHTML
-            contador++
-        }
-        matriz.push(m)   
-    }
-    matriz.shift()
-    objmulti.push(matriz)
+// let multi=document.querySelectorAll('[multi]')
+// let objmulti=[]
+// for(const m of multi){
+//     let matriz=[]
+//     let filas = m.getElementsByTagName('tr')
+//     let titulos = filas[0].getElementsByTagName('td')
+//     for(const f of filas){
+//         let celdas=f.getElementsByTagName('td')
+//         contador=0
+//         let m={}
+//         for(const c of celdas){
+//             m[titulos[contador].innerText]=c.innerHTML
+//             contador++
+//         }
+//         matriz.push(m)   
+//     }
+//     matriz.shift()
+//     objmulti.push(matriz)
     
-}
+// }
 o['matrices']=objmulti
 
 
@@ -96,7 +96,7 @@ tabla[i].removeAttribute('class')
 tabla[i].removeAttribute('align')
 tabla[i].removeAttribute('width')
 tabla[i].removeAttribute('height')
-tabla[i].setAttribute('class','table striped row-hover table-border row-border')
+tabla[i].setAttribute('class','table striped row-hover table-border row-border compact')
 let head=tabla[i].getElementsByTagName('thead')
 if(head.length==0){
 //  agregarHead(tabla[i])
