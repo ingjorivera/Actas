@@ -363,3 +363,9 @@ table[data-split-to] {
     margin-left: auto;
     margin-right: auto;
 }
+ol{
+    list-style-type: auto;
+    font-size: medium;
+    font-weight: bold;
+    color: var(--primario-oscuro);
+}
