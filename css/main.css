@@ -364,7 +364,10 @@ table[data-split-to] {
     margin-right: auto;
 }
 ol{
-    list-style-type: auto;
+    list-style-type: decimal !important;
+   
+}
+ol::before{
     font-size: medium;
     font-weight: bold;
     color: var(--primario-oscuro);
