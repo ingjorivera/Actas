@@ -43,10 +43,44 @@ for(let i=0;i<objetos.length;i++){
     o[objetos[i].getAttribute("tipo")]=objetos[i].innerHTML
     }
 }
-//obtener filas de desarrollo
 
-// let multi=document.querySelectorAll('[multi]')
-// let objmulti=[]
+//obtener filas de desarrollo
+let multi=document.querySelectorAll('[multi]')
+
+
+let objmulti=[]
+for(const m of multi){
+    let matriz=[]
+    
+    
+    let filas
+    if(m.childNodes[0].nodeName=='TABLE'){
+        filas=m.childNodes[0].childNodes[0].childNodes
+    }
+    else{
+        filas=m.childNodes[0].nextSibling.childNodes[0].childNodes
+    }
+   
+    let titulos=filas[0].childNodes
+    
+    for(const f of filas){
+        let m={}
+        let contador=0
+       
+        let celdas=f.childNodes
+       
+        for(const c of celdas){
+            m[titulos[contador].innerText]=c.innerHTML
+            
+            
+            contador++
+        }
+        matriz.push(m)
+    }
+    matriz.shift()
+    objmulti.push(matriz)
+}
+
 // for(const m of multi){
 //     let matriz=[]
 //     let filas = m.getElementsByTagName('tr')
@@ -67,7 +101,7 @@ for(let i=0;i<objetos.length;i++){
 // }
 o['matrices']=objmulti
 
-
+console.log(o)
 
 
 // function enviarObjeto(){

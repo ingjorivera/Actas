@@ -357,3 +357,9 @@ table[data-split-to] {
 [data-align-last-split-element='justify'] {
     text-align-last: initial !important;
 }
+.desarrollo img{
+    display: block;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
