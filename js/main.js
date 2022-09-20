@@ -1,3 +1,4 @@
+
 let objTexto=o
 let objeto=o
 let fecha=objeto['fecha'].split(/-/s)
@@ -75,19 +76,26 @@ let body=`
       <h6>${objeto['titulo1']}</h6>
       <div class="desarrollo">
       ${desarrolloweb}</div>
+      <div class="divisor"></div>
       <h6>${objeto['titulo2']}</h6>
       <div class>${objeto['valor2']}</div>
+      <div class="divisor"></div>
       <h6>${objeto['titulo3']}</h6>
       <div>${objeto['valor3']}</div>
+      <div class="divisor"></div>
       <h6>${objeto['titulo4']}</h6>
       ${participantesweb}
+      <div class="divisor"></div>
       <h6>${objeto['titulo5']}</h6>
       <div class="adjuntos">
         ${adjuntos}
       </div>
+      
+      
 `
 raiz.innerHTML=body
-document.head.innerHTML += '<link rel="stylesheet" href="../css/interface.css" type="text/css"/>';
-document.head.innerHTML += '<link rel="stylesheet" href="../css/main.css" type="text/css"/>';
+// document.head.innerHTML += ' <link id="style-screen" href="../css/style-screen.css" rel="stylesheet" type="text/css">';
+document.head.innerHTML += ' <link href="../css/interface.css" rel="stylesheet" type="text/css">';
+document.head.innerHTML += ' <link href="../css/main.css" rel="stylesheet" type="text/css">';
 document.head.innerHTML += '<link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css">';
 

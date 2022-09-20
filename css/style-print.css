@@ -1,0 +1,95 @@
+@media print {
+
+    /* Size and marin for all pages ------------- */
+    @page {
+       
+        margin-top: 80mm!important;
+    margin-left: 15mm;
+    margin-right: 15mm;
+    border-top: 1px solid var(--secundario-blanco);
+    border-bottom: 1px solid var(--secundario-blanco);
+    margin-bottom: 15mm;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @bottom-right{
+        content: "Pagina " counter(page) " de " counter(pages);
+        vertical-align: top;
+        padding-top: 10px;        
+        font-size: 7px !important;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+      @bottom-left{
+       
+        content:element(texto-izquierda);
+        vertical-align: top;
+    }
+    @top-center{
+        content: element(header);        
+        
+    }
+
+    @right-middle{
+       vertical-align: bottom;
+        content: element(signa);
+        
+        
+    }
+    @left-middle{
+        content: string(titulo,start); 
+        position: absolute;
+        width: 100vw;
+   
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: bold;
+    top: -25px;
+    }
+    }
+    
+     
+
+    /* LEFT PAGES -------------------------------- */
+
+   
+
+    .chapter  h1 { string-set: chapTitle content(text); }
+
+
+
+    /* BLANK PAGES -------------------------------- */
+
+    @page:blank {
+        @bottom-left { content: none; }
+        @bottom-center { content: none; }
+        @bottom-right { content: none; }
+    }
+
+
+
+    /* COUVERTURE -------------------------------- */
+
+
+
+
+    /* SECTION BREAKS -------------------------------- */
+
+    .chapter {
+        break-before: right;
+    }
+
+
+
+    /* CONTENT --------------------------------------- */
+
+    figure, img{
+        width: 100%;
+    }
+
+
+}
+
+
